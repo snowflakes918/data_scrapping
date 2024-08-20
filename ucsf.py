@@ -105,6 +105,6 @@ for index, row in data.iterrows():
 
 # Convert results to a DataFrame and save to a new CSV file
 results_df = pd.DataFrame(results)
-results_df.to_csv('ucsf_staff_with_contact_info.csv', index=False)
+results_df.to_csv('result/ucsf_staff_with_contact_info.csv', index=False)
 
 print("Contact information has been processed and saved to 'ucsf_staff_with_contact_info.csv'.")
