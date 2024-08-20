@@ -19,7 +19,7 @@ def get_contact_info_from_directory(name):
     pexit_tag = soup.find('div', class_='pexit')
     pexit = pexit_tag.text.strip() if pexit_tag else None
     if pexit and 'Your search did not return any results' in pexit:
-        return None, None, None, None, None, None, None, True, False
+        return None, None, None, None, None, None, None, False, False
 
     # Check for multiple results
     page_title_tag = soup.find('p', class_='page-title')
