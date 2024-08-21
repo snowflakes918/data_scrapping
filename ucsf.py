@@ -100,7 +100,7 @@ for index, row in data.iterrows():
             'In_Directory': True
         })
         print(
-            f"Processed: {name}, Directory Name: {directory_name}, Email: {email}, Phone: {phone}, Location: {location}, Websites: {websites}, Department: {department}, Supervisor/PI: {supervisor}")
+            f"Processed: {name}, Directory Name: {directory_name}, Email: {email}, Phone: {phone}, Location: {location}, Websites: {websites}, Department: {department}, Supervisor/PI: {supervisor}, Multiple Result: {multiple_results}, In Directory: {in_directory}")
     time.sleep(5)  # Delay between requests to prevent rate limiting
 
 # Convert results to a DataFrame and save to a new CSV file

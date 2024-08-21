@@ -1,79 +1,81 @@
-Name,Email,Phone
-Cynthia L Chamberlin,losgatos%40ucla.edu,310-794-0663
-Dale Slaughter,daslaughter%40mednet.ucla.edu,
-Dale Steinbacher,dsteinbacher%40uclaextension.edu,310-825-1833
-Daniel Castro,daniel.castro%40research.ucla.edu,310-983-3025
-Daniel Costanzo,,310-825-3880
-Daniel Mayhew,dmayhew%40tdg.ucla.edu,310-794-8098
-Daniela Markovic,dmarkovic%40mednet.ucla.edu,310-794-3929
-Daniella Escobedo,descobedo%40mednet.ucla.edu,310-794-3910
-Danny Diaz,,
-Danny Gomez,danny.gomez%40anderson.ucla.edu,
-Daphne Brydon,,
-Darina Genina,darina.genina%40anderson.ucla.edu,310-206-5823
-David Islas,dislas%40luskin.ucla.edu,310-206-4331
-David Wiener,,
-Deborah La Torre,latorre%40cresst.org,310-206-1385
-Demetra Long,dslong%40mednet.ucla.edu,310-267-9582
-Denise Wong,denise.wong%40research.ucla.edu,310-794-6781
-Denisse Huerta,,
-Deniz Gorgulu,dgorgulu%40g.ucla.edu,310-954-7059
-Dennis Urie,durie%40ioes.ucla.edu,310-825-6999
-Deyu Pan,,
-Dhruv Khurana,dhruvkhurana%40ucla.edu,
-Diana Alcaraz,diana.alcaraz%40research.ucla.edu,310-206-7362
-Diane Ohkawahira,dohkawah%40humnet.ucla.edu,
-Dina Boktor,dina.boktor%40research.ucla.edu,310-267-2917
-Dominique Edwards,dbedwards%40mednet.ucla.edu,
-Donna Fletcher,,310-826-4458
-Donna Whistler,dwhistler%40mednet.ucla.edu,310-267-3299
-Drew Digby,drewdigby%40luskin.ucla.edu,
-Dyanna De Alba,ddealba%40chr.ucla.edu,310-794-0843
-Dylan Henson,dhenson%40it.ucla.edu,310-267-5168
-Eduardo Piqueiras,,
-Edward Galvan,ejgalvan%40mednet.ucla.edu,310-962-9437
-Edward Hannan,khannan%40library.ucla.edu,310-267-2355
-Edward Lohnes,elohnes%40mednet.ucla.edu,310-613-4391
-Eileen Callahan,ecallahan%40mednet.ucla.edu,310-794-2020
-Elaine Evans-Rose,eerose%40mednet.ucla.edu,310-321-3656
-Elaine Howell,emhowell%40mednet.ucla.edu,310-267-4258
-Elaine Morita,elaine%40cnsi.ucla.edu,310-267-0030
-Elana Redfield,redfield%40law.ucla.edu,
-Eleanor Huntington,,
-Elizabeth Cortez,escortez%40mednet.ucla.edu,310-267-1029
-Elizabeth Medrano-Jimenez,elizabeth.jimenez%40anderson.ucla.edu,310-825-8725
-Elizabeth Nelson,enelson%40ph.ucla.edu,310-206-1904
-Ellen Stolzenberg,stolzenberg%40cresst.org,310-825-6991
-Emma Duffy,ekduffy%40mednet.ucla.edu,
-Emma Vale,evale%40hammer.ucla.edu,310-443-7055
-Emmanuel Masongsong,emasongsong%40igpp.ucla.edu,310-206-6627
-Eric Ahlberg,eahlberg%40ucla.edu,
-Erin Christovale,echristovale%40hammer.ucla.edu,310-443-7045
-Erin Unger,eunger%40mednet.ucla.edu,310-206-3641
-Erinn Knox,eknox%40mednet.ucla.edu,310-490-4888
-Esha Sirkar,esirkar%40mednet.ucla.edu,310-794-0349
-Estefania Ramires-Sanchez,esanchezsalas%40mednet.ucla.edu,310-267-5442
-Ethan Patron,epatron%40mednet.ucla.edu,310-794-4334
-Ethel Roxas,eroxas%40mednet.ucla.edu,310-341-9600
-Eunhee Keum,keum%40cresst.org,
-Evan Kress,kress%40astro.ucla.edu,310-825-1666
-Evonne Biggs,ebiggs%40mednet.ucla.edu,310-664-7595
-Ewa Barylak,ebarylak%40seas.ucla.edu,310-206-6999
-Fang-I Chu,fchu%40mednet.ucla.edu,310-267-8993
-Farzam Hariri,fhariri%40mednet.ucla.edu,310-206-5756
-Frances Whalen,fwhalen%40mednet.ucla.edu,
-Fuying Gao,fygao%40ucla.edu,310-794-6570
-Gabriela Werre,gwerre%40mednet.ucla.edu,310-794-0999
-Geanna Hovey,,
-Gerard Aquino,gerardpatrick.aquino%40research.ucla.edu,310-825-5406
-Gina Ruiz,gruiz%40ph.ucla.edu,310-206-3248
-Ginalyn Hawkins,,
-Ginger Williams,gwilliams%40ipam.ucla.edu,310-794-1647
-Giovanni Rodriguez,,
-Giovanny Barrientos,gbarrientos%40ts.ucla.edu,
-Gloria Johnson,gyjohnson%40unex.ucla.edu,
-Gohar Grigorian,gohart%40international.ucla.edu,310-206-0866
-Gonzalo Moreno Ruiz De Elvira,gmoreno%40ph.ucla.edu,
-Grace Agustin,grace.agustin%40research.ucla.edu,310-794-6215
-Grace Leon,gleon%40atmos.ucla.edu,310-206-2640
-Gregory Khitrov,,
+Name,Directory_Name,Email,Phone,Location,Websites,Department,Supervisor/PI,Multiple_Results,in_directory,In_Directory
+,,,,,,,,False,False,
+Cynthia L C,,,,,,,,True,True,
+Cynthia L Chamberlin,Cynthia Chamberlin,losgatos@ucla.edu,310-794-0663,,,Med-GIM & HSR,,False,,True
+Dale Slaughter,Dale Ann Slaughter,daslaughter@mednet.ucla.edu,405-590-1840,,,UCLA CTSI Community Engagement & Research Program,,False,,True
+Dale Steinbacher,Dale Steinbacher,dsteinbacher@uclaextension.edu,310-825-1833,,,UNEX-ITS,,False,,True
+Daniel Castro,Daniel Castro,daniel.castro@research.ucla.edu,310-983-3025,,,RPC,,False,,True
+Daniel Costanzo,Daniel Marcello Costanzo,,310-825-3880,,,EPSS,,False,,True
+Daniel Mayhew,Daniel Mayhew,dmayhew@tdg.ucla.edu,310-794-8098,,,Technology Development Group,,False,,True
+Daniela Markovic,Daniela Markovic,dmarkovic@mednet.ucla.edu,310-794-3929,,,Med-GIM & HSR,,False,,True
+Daniella Escobedo,Daniella Escobedo,descobedo@mednet.ucla.edu,310-794-3910,,,CTSI Office of Clinical Research,,False,,True
+,,,,,,,,False,False,
+Danny Gomez,Danny Jose Gomez,danny.gomez@anderson.ucla.edu,,,,Anderson - Riordan Programs,,False,,True
+,,,,,,,,False,False,
+Darina Genina,Darina Genina,darina.genina@anderson.ucla.edu,310-206-5823,,,Easton Technology Management Center,,False,,True
+David Islas,David Islas,dislas@luskin.ucla.edu,310-206-4331,,,Luskin SPA - Financial Services,,False,,True
+,,,,,,,,False,False,
+Deborah La Torre,Deborah La Torre,latorre@cresst.org,310-206-1385,,,Education - CRESST,,False,,True
+Demetra Long,Demetra Long,dslong@mednet.ucla.edu,310-267-9582,,,Nur,,False,,True
+Denise Wong,Denise Wong,denise.wong@research.ucla.edu,310-794-6781,,,ORA - EFM,,False,,True
+,,,,,,,,False,False,
+Deniz Gorgulu,Deniz Gorgulu,dgorgulu@g.ucla.edu,310-954-7059,,,CCPR-California Center for Population Research,,False,,True
+Dennis Urie,Dennis A. Urie,durie@ioes.ucla.edu,310-825-6999,,,Inst of the Environ & Sustainability,,False,,True
+,,,,,,,,False,False,
+Dhruv Khurana,Dhruv Khurana,dhruvkhurana@ucla.edu,,,,Pub Hlth - Biostatistics,,False,,True
+Diana Alcaraz,Diana Alcaraz,diana.alcaraz@research.ucla.edu,310-206-7362,,,ORA - OHRPP,,False,,True
+Diane Ohkawahira,Diane S. Ohkawahira,dohkawah@humnet.ucla.edu,424-259-5328,,,"Dean, Humanities",,False,,True
+Dina Boktor,Dina Boktor,dina.boktor@research.ucla.edu,310-267-2917,,,RPC,,False,,True
+Dominique Edwards,Dominique Brittaney Edwards,dbedwards@mednet.ucla.edu,000-000-0000,,,CTSI-Financial Coverage & Activation,,False,,True
+Donna Fletcher,Donna Fletcher,,310-826-4458,,,Clinical Genetics,,False,,True
+Donna Whistler,Donna Gail Whistler,dwhistler@mednet.ucla.edu,310-267-3299,,,Medl Cntr-Admin,,False,,True
+Drew Digby,Drew Digby,drewdigby@luskin.ucla.edu,,,,Social Welfare,,False,,True
+Dyanna De Alba,Dyanna De Alba,ddealba@chr.ucla.edu,310-794-0843,,,Campus Human Resources,,False,,True
+Dylan Henson,Dylan A. Henson,dhenson@it.ucla.edu,310-267-5168,,,Information Technology Services,,False,,True
+,,,,,,,,False,False,
+Edward Galvan,Edward Galvan,ejgalvan@mednet.ucla.edu,310-962-9437,,,Medical Center-Security,,False,,True
+Edward Hannan,Edward K Hannan,khannan@library.ucla.edu,310-267-2355,,,Lib Admin,,False,,True
+Edward Lohnes,Edward Lohnes,elohnes@mednet.ucla.edu,310-613-4391,,,DV l Health Sciences Development,,False,,True
+Eileen Callahan,Eileen Callahan,ecallahan@mednet.ucla.edu,310-794-2020,,,Medicine- Pulmonary,,False,,True
+Elaine Evans-Rose,Elaine Jo-ann Evans-Rose,eerose@mednet.ucla.edu,310-321-3656,,,Jonsson Comprehensive Cancer Center - CRU,,False,,True
+Elaine Howell,Elaine Howell,emhowell@mednet.ucla.edu,310-267-4258,,,CTSI,,False,,True
+Elaine Morita,Elaine Aiko Morita,elaine@cnsi.ucla.edu,310-267-0030,,,CNSI,,False,,True
+Elana Redfield,Elana C Redfield,redfield@law.ucla.edu,,,,School of Law - Williams Institute,,False,,True
+,,,,,,,,False,False,
+Elizabeth Cortez,Elizabeth Socorro Cortez,escortez@mednet.ucla.edu,310-267-1029,,,CRTC,,False,,True
+Elizabeth Medrano-Jimenez,Elizabeth Medrano-Jimenez,elizabeth.jimenez@anderson.ucla.edu,310-825-8725,,,Anderson- Cntr for Global Mgmt,,False,,True
+Elizabeth Nelson,,,,,,,,True,True,
+Ellen Stolzenberg,Ellen Stolzenberg,stolzenberg@cresst.org,310-825-6991,,,Education - CRESST,,False,,True
+Emma Duffy,Emma Duffy,ekduffy@mednet.ucla.edu,,,,Peds - Infectious Diseases,,False,,True
+Emma Vale,Emma Evans Vale,evale@hammer.ucla.edu,310-443-7055,,,Hammer Museum,,False,,True
+Emmanuel Masongsong,Emmanuel V Masongsong,emasongsong@igpp.ucla.edu,310-206-6627,,,EPSS,,False,,True
+Eric Ahlberg,Eric Ahlberg,eahlberg@ucla.edu,949-798-9261,,,Civil & Envir Engr,,False,,True
+Erin Christovale,Erin Alexis Christovale,echristovale@hammer.ucla.edu,310-443-7045,,,Hammer Museum,,False,,True
+Erin Unger,Erin Unger,eunger@mednet.ucla.edu,310-206-3641,,,Medicine- GIM & HSR,,False,,True
+Erinn Knox,Erinn Knox,eknox@mednet.ucla.edu,310-490-4888,,,CTSI/ECRI,,False,,True
+Esha Sirkar,Esha Sirkar,esirkar@mednet.ucla.edu,310-794-0349,,,CTSI-Financial Coverage & Activation,,False,,True
+Estefania Ramires-Sanchez,Estefania Ramires-Sanchez,esanchezsalas@mednet.ucla.edu,310-267-5442,,,Med- GIM & HSR,,False,,True
+Ethan Patron,Ethan Patron,epatron@mednet.ucla.edu,310-794-4334,,,Urology,,False,,True
+Ethel Roxas,Ethel Angeli Tumaliwan Roxas,eroxas@mednet.ucla.edu,310-341-9600,,,Psychiatry,,False,,True
+Eunhee Keum,EunHee Keum,keum@cresst.org,,,,Education - CRESST,,False,,True
+Evan Kress,Evan Kress,kress@astro.ucla.edu,310-825-1666,,,Physics & Astronomy,,False,,True
+Evonne Biggs,Evonne Patrice Biggs,ebiggs@mednet.ucla.edu,310-664-7595,,,Venice Family Clinic (Simms),,False,,True
+Ewa Barylak,Ewa Barylak,ebarylak@seas.ucla.edu,310-206-6999,,,MAE,,False,,True
+Fang-I Chu,,,,,,,,True,True,
+Farzam Hariri,Farzam Hariri,fhariri@mednet.ucla.edu,310-206-5756,,,Med-Hemat & Onc,,False,,True
+Frances Whalen,Frances Louise Whalen,fwhalen@mednet.ucla.edu,,,,Peds - Infec Dis,,False,,True
+Fuying Gao,Fuying Gao,fygao@ucla.edu,310-794-6570,,,Semel Institute,,False,,True
+Gabriela Werre,Gabriela Werre,gwerre@mednet.ucla.edu,310-794-0999,,,CTSI/ECRI,,False,,True
+,,,,,,,,False,False,
+Gerard Aquino,Gerard Patrick Aquino,gerardpatrick.aquino@research.ucla.edu,310-825-5406,,,ORA - OHRPP,,False,,True
+Gina Ruiz,,,,,,,,True,True,
+,,,,,,,,False,False,
+Ginger Williams,Ginger Williams,gwilliams@ipam.ucla.edu,310-794-1647,,,Institute for Pure and Applied Mathematics,,False,,True
+,,,,,,,,False,False,
+Giovanny Barrientos,Giovanny Barrientos,gbarrientos@ts.ucla.edu,000-000-0000,,,Parking Assets,,False,,True
+Gloria Johnson,Gloria Johnson,gyjohnson@unex.ucla.edu,,,,UNEX-Mktg,,False,,True
+Gohar Grigorian,Gohar Grigorian,gohart@international.ucla.edu,310-206-0866,,,Intl Inst-Intl Visitors Bureau,,False,,True
+Gonzalo Moreno Ruiz De Elvira,Gonzalo Moreno Ruiz De Elvira,gmoreno@ph.ucla.edu,,,,Pub Hlth-WORLD Policy Analysis Center,,False,,True
+Grace Agustin,Grace Agustin,grace.agustin@research.ucla.edu,310-794-6215,,,ORA - EFM,,False,,True
+Grace Leon,Grace Leon,gleon@atmos.ucla.edu,310-206-2640,,,Atmospheric & Oceanic Sciences,,False,,True
+,,,,,,,,False,False,

@@ -104,7 +104,8 @@ for index, row in data.iterrows():
     else:
         results.append({
             'Name': name, 'Directory_Name': directory_name, 'Email': email, 'Phone': phone, 'Location': location,
-            'Websites': websites, 'Department': department, 'Supervisor/PI': supervisor, 'Multiple_Results': False
+            'Websites': websites, 'Department': department, 'Supervisor/PI': supervisor, 'Multiple_Results': False,
+            'In_Directory': True
         })
         print(
             f"Processed: {name}, Directory Name: {directory_name}, Email: {email}, Phone: {phone}, Location: {location}, Websites: {websites}, Department: {department}, Supervisor/PI: {supervisor}, Multiple Result: {multiple_results}, In Directory: {in_directory}")
