@@ -22,21 +22,31 @@ def scrape_ucsd_directory_from_excel(file_path):
 
             # Construct the search URL using first and last names
             search_url = f"https://itsweb.ucsd.edu/directory/search?last={last_name}&first={first_name}&email=&title=&phone=&fax=&dept2=&mail=&searchType=0"
-            page.goto(search_url)
+            try:
+                page.goto(search_url)
+            except:
+                results.append({
+                    'First Name': 'N/A',
+                    'Last Name': 'N/A',
+                    # 'Name': emp_name,
+                    # 'Email': email,
+                    'Mail Code': 'N/A'
+                })
+                continue
             page.wait_for_timeout(3000)  # Wait for the page to fully load
 
             # Try to extract the data with error handling
-            try:
-                page.wait_for_selector('#empName', timeout=2000)
-                emp_name = page.text_content('#empName')
-            except:
-                emp_name = 'N/A'
-
-            try:
-                page.wait_for_selector('a[href^="mailto:"]', timeout=2000)
-                email = page.text_content('a[href^="mailto:"]') or 'N/A'
-            except:
-                email = 'N/A'
+            # try:
+            #     page.wait_for_selector('#empName', timeout=2000)
+            #     emp_name = page.text_content('#empName')
+            # except:
+            #     emp_name = 'N/A'
+            #
+            # try:
+            #     page.wait_for_selector('a[href^="mailto:"]', timeout=2000)
+            #     email = page.text_content('a[href^="mailto:"]') or 'N/A'
+            # except:
+            #     email = 'N/A'
 
             try:
                 page.wait_for_selector('label:has-text("Mail Code") + div', timeout=2000)
@@ -50,8 +60,8 @@ def scrape_ucsd_directory_from_excel(file_path):
             person_entry = {
                 'First Name': first_name,
                 'Last Name': last_name,
-                'Name': emp_name,
-                'Email': email,
+                # 'Name': emp_name,
+                # 'Email': email,
                 'Mail Code': mail_code
             }
 
