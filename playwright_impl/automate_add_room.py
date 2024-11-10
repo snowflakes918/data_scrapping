@@ -4,8 +4,9 @@ import time
 
 import pandas as pd
 from playwright.sync_api import sync_playwright
+from playwright._impl._errors import TimeoutError
 
-SEARCH_URL = "https://uaw4811.laborbase.org/locationsdataentry/building/42"
+SEARCH_URL = "https://uaw4811.laborbase.org/"
 USERNAME = "siwei.huang@uc-uaw.org"
 PASSWORD = "Elves-Negligent-Footsore5"
 CAMPUS_OPTIONS = {
@@ -39,7 +40,7 @@ def print_page_html():
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
 
-        page.goto("https://uaw4811.laborbase.org/")
+        page.goto(SEARCH_URL)
 
         # Fill in login credentials
         page.fill("#identifier-field", USERNAME)
@@ -56,51 +57,55 @@ def print_page_html():
         page.click("text=Location Data Entry")
 
         for index, row in test_data.iterrows():
-            # get the data out of csv file
-            building_name = row['Building']
-            campus_name = row['Campus']
-            room_number = str(row['Room'])
-            if building_name is None:
+            try:
+                # get the data out of csv file
+                building_name = row['Building']
+                campus_name = row['Campus']
+                room_number = str(row['Room'])
+                if building_name is None:
+                    continue
+
+                floor_number = extract_first_digit(room_number)  # Use first digit as floor number
+
+                # Step 3a: Search for the building
+                # choose campus first
+                if campus_name in CAMPUS_OPTIONS:
+                    campus_value = CAMPUS_OPTIONS[campus_name]
+                    page.select_option("#person-id", campus_value)
+
+                # input building in the search bar
+                page.fill(".MuiInputBase-inputTypeSearch", building_name)
+                page.click(f"text={building_name}")
+
+                # Step 3b: Click on the 'ADD' button to add a new room
+                page.click(".css-1igheai")
+
+                # Step 3c: Fill in the room details
+                page.locator("input[name='room']").fill(room_number)  # Room number
+                page.locator("input[name='floor']").fill(floor_number)  # Floor number
+
+                # open the location type dropdown menu
+                # location_dropdown_button = page.query_selector_all(
+                #                             '.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-vubbuv')
+                # location_dropdown_button[1].click()
+                page.locator("input[name='location_type.location_type']").fill("Office")
+                page.click("text=Office")
+
+                time.sleep(1)
+
+                # Step 3d: Save the new room information
+                page.wait_for_selector(".MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-fhjkay")
+                page.click(".MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-fhjkay")
+
+                # Wait for confirmation or transition before proceeding
+                time.sleep(3)  # Adjust as needed
+            except TimeoutError:
+                print(f"Timeout error when processing {building_name} {row['Room']} at {campus_name}")
                 continue
-
-            floor_number = extract_first_digit(room_number)  # Use first digit as floor number
-
-            # Step 3a: Search for the building
-            # choose campus first
-            if campus_name in CAMPUS_OPTIONS:
-                campus_value = CAMPUS_OPTIONS[campus_name]
-                page.select_option("#person-id", campus_value)
-
-            # input building in the search bar
-            page.fill(".MuiInputBase-inputTypeSearch", building_name)
-            page.click(f"text={building_name}")
-
-            # Step 3b: Click on the 'ADD' button to add a new room
-            page.click(".css-1igheai")
-
-            # Step 3c: Fill in the room details
-            page.locator("input[name='room']").fill(room_number)  # Room number
-            page.locator("input[name='floor']").fill(floor_number)  # Floor number
-
-            # open the location type dropdown menu
-            # location_dropdown_button = page.query_selector_all(
-            #                             '.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-vubbuv')
-            # location_dropdown_button[1].click()
-            page.locator("input[name='location_type.location_type']").fill("Office")
-            page.click("text=Office")
-
-            time.sleep(1)
-
-            # Step 3d: Save the new room information
-            page.wait_for_selector(".MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-fhjkay")
-            page.click(".MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-fhjkay")
-
-            # Wait for confirmation or transition before proceeding
-            time.sleep(3)  # Adjust as needed
 
         browser.close()
 
-
+# just for test
 def open_page_for_inspection():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)  # Open in a visible browser
