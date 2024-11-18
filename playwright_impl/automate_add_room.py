@@ -85,9 +85,6 @@ def print_page_html():
                 page.locator("input[name='floor']").fill(floor_number)  # Floor number
 
                 # open the location type dropdown menu
-                # location_dropdown_button = page.query_selector_all(
-                #                             '.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-vubbuv')
-                # location_dropdown_button[1].click()
                 page.locator("input[name='location_type.location_type']").fill("Office")
                 page.click("text=Office")
 
@@ -97,8 +94,9 @@ def print_page_html():
                 page.wait_for_selector(".MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-fhjkay")
                 page.click(".MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-fhjkay")
 
-                # Wait for confirmation or transition before proceeding
-                time.sleep(3)  # Adjust as needed
+                # Wait 3 seconds just to be safe
+                time.sleep(3)
+                print(f"Building {building_name} Room {room_number} has been added")
             except TimeoutError:
                 print(f"Timeout error when processing {building_name} {row['Room']} at {campus_name}")
                 continue
