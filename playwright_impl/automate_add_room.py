@@ -25,7 +25,13 @@ CAMPUS_OPTIONS = {
     "UCOP": "12"
 }
 
-test_data = pd.read_csv(filepath_or_buffer='../data/test_location - main.csv')
+
+def data_pre_process(filepath):
+    data = pd.read_csv(filepath_or_buffer='../data/test_location - main.csv')
+    data = data.drop_duplicates(subset=['Room', 'Building'])
+    data.reset_index(drop=True, inplace=True)
+
+    return data
 
 
 def extract_first_digit(room_number):
@@ -35,7 +41,7 @@ def extract_first_digit(room_number):
     return match.group(0) if match else "0"
 
 
-def print_page_html():
+def print_page_html(data):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
@@ -56,7 +62,7 @@ def print_page_html():
         page.wait_for_selector("text=Location Data Entry")
         page.click("text=Location Data Entry")
 
-        for index, row in test_data.iterrows():
+        for index, row in data.iterrows():
             try:
                 # get the data out of csv file
                 building_name = row['Building']
@@ -103,7 +109,7 @@ def print_page_html():
 
         browser.close()
 
-# just for test
+
 def open_page_for_inspection():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)  # Open in a visible browser
@@ -120,4 +126,5 @@ def open_page_for_inspection():
 
 if __name__ == "__main__":
     # open_page_for_inspection()
-    print_page_html()
+    df = data_pre_process()
+    print_page_html(df)
