@@ -1,4 +1,3 @@
-import sys
 import time
 
 from commonUtils.scrape_utils import safe_text_content, safe_attribute_content, apply_transform
