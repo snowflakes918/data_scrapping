@@ -1,0 +1,18 @@
+{
+    "input_file": "data/input/data_to_scrap - San Diego.csv",
+    "output_file": "data/output/ucsd_directory.csv",
+    "search_url": "https://itsweb.ucsd.edu/directory/search?last={last_name}&first={first_name}&email=&title=&phone=&fax=&dept2=&mail=&searchType=0",
+    "no_results_selector": "p:has-text('No results were found for your search.')",
+    "multiple_results_selector": {
+        "type": "text",
+        "selector": ".row.spacer h3:has-text('Search Results')"
+    },
+    "fields": {
+        "Name": {"type": "text", "selector": "#empName"},
+        "Title": {"type": "text", "selector": "dt:has-text('Title') + dd"},
+        "Phone": {"type": "attribute", "selector": "a.tel", "attribute": "href"},
+        "Location": {"type": "text", "selector": "#empLoc"},
+        "Email": {"type": "text", "selector": "a[href^='mailto:']"},
+        "Department": {"type": "text", "selector": "dt:has-text('Home department') + dd"}
+    }
+}

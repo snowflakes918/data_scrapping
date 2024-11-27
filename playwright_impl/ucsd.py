@@ -46,6 +46,8 @@ def scrape_ucsd_directory_from_excel(file_path):
                     'Name': 'N/A',
                     'Email': 'N/A',
                     'Mail Code': 'N/A',
+                    'Phone': 'N/A',
+                    'Location': 'N/A',
                     'Is Multiple Results': False
                 })
                 print(f'No result found for {first_name} {last_name}')
@@ -58,6 +60,8 @@ def scrape_ucsd_directory_from_excel(file_path):
                     'Name': 'N/A',
                     'Email': 'N/A',
                     'Mail Code': 'N/A',
+                    'Phone': 'N/A',
+                    'Location': 'N/A',
                     'Is Multiple Results': True
                 })
                 print(f'Multiple results found for {first_name} {last_name}')
@@ -85,11 +89,16 @@ def scrape_ucsd_directory_from_excel(file_path):
             except:
                 mail_code = 'N/A'
 
+            phone = safe_attribute_content(page, 'a.tel', 'href').replace('tel:', '')
+            location = safe_text_content(page, '#empLoc')
+
             person_entry = {
                 'First Name': first_name,
                 'Last Name': last_name,
                 'Name': emp_name,
                 'Email': email,
+                'Phone': phone,
+                'Location': location,
                 'Mail Code': mail_code,
                 'Is Multiple Results': False
             }
@@ -104,9 +113,29 @@ def scrape_ucsd_directory_from_excel(file_path):
     return pd.DataFrame(results)
 
 
+def safe_attribute_content(page, selector, attribute, default='N/A'):
+    """Safely extract an attribute value from a selector, returning a default value if not found."""
+    try:
+        element = page.query_selector(selector)
+        if element:
+            return element.get_attribute(attribute).strip()
+    except Exception as e:
+        print(f"Error extracting attribute {attribute} for selector {selector}: {e}")
+    return default
+
+def safe_text_content(page, selector, default='N/A'):
+    """Safely extract text content from a selector, returning a default value if not found."""
+    try:
+        element = page.query_selector(selector)
+        if element:
+            return element.text_content().strip()
+    except Exception as e:
+        print(f"Error extracting content for selector {selector}: {e}")
+    return default
+
 if __name__ == "__main__":
     # File path to the Excel file with 'first name' and 'last name' columns
-    csv_file_path = '../data/ucsd_staff_data.csv'
+    csv_file_path = '../data/data_to_scrap - San Diego.csv'
 
     # Scrape the data
     scraped_data_df = scrape_ucsd_directory_from_excel(csv_file_path)

@@ -80,7 +80,7 @@ def find_contact_info(name):
             time.sleep(60)  # Wait for 60 seconds before retrying
 
 
-data = pd.read_csv('../data/data_to_scrap - Los Angeles.csv')
+data = pd.read_csv('../data/ucla_staff.csv')
 
 # List to store results
 results = []

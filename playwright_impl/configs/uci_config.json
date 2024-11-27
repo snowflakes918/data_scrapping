@@ -1,0 +1,34 @@
+{
+    "input_file": "data/input/data_to_scrap - Irvine.csv",
+    "output_file": "data/output/uci_directory.csv",
+    "search_url": "https://directory.uci.edu/query/{first_name}%20{last_name}?filter=all",
+    "no_results_selector": "p:has-text('No results were found for your search.')",
+    "multiple_results_selector": {
+        "type": "element",
+        "selector": "div#collapse2"
+    },
+    "fields": {
+        "Name": {
+            "type": "text",
+            "selector": "h4"
+        },
+        "Email": {
+            "type": "attribute",
+            "selector": "a[href^='mailto:']",
+            "attribute": "href",
+            "transform": "strip_mailto"
+        },
+        "Title": {
+            "type": "text",
+            "selector": "div.d-flex p.mb-0.w-50"
+        },
+        "Phone": {
+            "type": "text",
+            "selector": "div.d-flex p.mb-0.text-right.w-50"
+        },
+        "Department": {
+            "type": "text",
+            "selector": "div.d-flex p.mb-0.w-60"
+        }
+    }
+}

@@ -2,8 +2,6 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import time
-from helper import display_result, export_to_csv
-
 
 # Function to get contact details from UCSF directory
 def get_contact_info_from_directory(name):
@@ -85,6 +83,22 @@ def main():
         time.sleep(1)
 
     export_to_csv(results, '../result/ucsf_staff_with_contact_info.csv')
+
+def display_result(result):
+    if not result['In_Directory']:
+        print(f"Processed: {result['Name']}, not in directory")
+    elif result['Multiple_Results']:
+        print(f"Processed: {result['Name']}, Multiple results found")
+    else:
+        print(
+            f"Processed: {result['Name']}, Directory Name: {result['Directory_Name']}, Email: {result['Email']}, Phone: {result['Phone']}, Location: {result['Location']}, Websites: {result['Websites']}, Department: {result['Department']}, Supervisor/PI: {result['Supervisor/PI']}")
+
+
+# Function to export results to CSV
+def export_to_csv(results, filename):
+    df = pd.DataFrame(results)
+    df.to_csv(filename, index=False)
+    print(f"Data exported to {filename}")
 
 
 if __name__ == "__main__":

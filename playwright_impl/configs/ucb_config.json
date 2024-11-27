@@ -1,0 +1,18 @@
+{
+    "input_file": "data/input/data_to_scrap - Berkeley.csv",
+    "output_file": "data/output/ucb_directory.csv",
+    "search_url": "https://www.berkeley.edu/directory/?search-term={first_name}+{last_name}",
+    "no_results_selector": "p:has-text('No results were found for your search.')",
+    "multiple_results_selector": {
+        "type": "text",
+        "selector": "h2:has-text(\"results for\")"
+    },
+    "fields": {
+        "Name": {"type": "text", "selector": "directory-search-result h2"},
+        "Title": {"type": "text", "selector": "dt:has-text('Title') + dd"},
+        "Address": {"type": "text", "selector": "dt:has-text('Address') + dd"},
+        "Email": {"type": "attribute", "selector": "span.__cf_email__", "attribute": "data-cfemail"},
+        "Phone": {"type": "attribute", "selector": "dt:has-text('Telephone') + dd a", "attribute": "href"},
+        "Department": {"type": "text", "selector": "dt:has-text('Home department') + dd"}
+    }
+}

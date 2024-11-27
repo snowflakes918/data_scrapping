@@ -1,0 +1,34 @@
+{
+    "input_file": "data/input/data_to_scrap - Riverside.csv",
+    "output_file": "data/output/ucr_directory.csv",
+    "search_url": "https://profiles.ucr.edu/app/home/search;name={first_name}%20{last_name};org=;title=;phone=;affiliation=FacultyStaff",
+    "no_results_selector": "p:has-text('No profiles were found for the given search criteria.')",
+    "multiple_results_selector": {
+        "type": "element",
+        "selector": "div#collapse2"
+    },
+    "fields": {
+        "Name": {
+            "type": "text",
+            "selector": "mat-card-header .columns.header-details h5"
+        },
+        "Email": {
+            "type": "text",
+            "selector": "a[href^=\"mailto:\"]",
+            "attribute": "href",
+            "transform": "strip_mailto"
+        },
+        "Title": {
+            "type": "text",
+            "selector": "mat-card-header .columns.header-details ul.border-separated-list li strong em"
+        },
+        "Phone": {
+            "type": "text",
+            "selector": "mat-card-content .content-detail:nth-of-type(2) a[href^=\"tel:\"]"
+        },
+        "Department": {
+            "type": "text",
+            "selector": "mat-card-content .content-detail:first-of-type strong"
+        }
+    }
+}
