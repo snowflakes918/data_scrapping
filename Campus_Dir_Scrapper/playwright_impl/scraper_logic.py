@@ -59,6 +59,8 @@ def scrape_directory(config):
                 results.append(record)
                 print(f"{record} has been processed!")
 
+                time.sleep(5)
+
 
             except Exception as e:
                 print(f"Error processing {first_name} {last_name}: {e}")

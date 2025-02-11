@@ -21,11 +21,6 @@ if __name__ == "__main__":
     with open("configs/ucr_config.json") as f:
         ucr_config = json.load(f)
 
-    # Scrape UCSD directory
-    ucsd_results = scrape_directory(ucsd_config)
-    ucsd_results.to_csv(ucsd_config["output_file"], index=False)
-    print(f"Scraping complete for UCSD! Data saved to {ucsd_config['output_file']}.")
-
     # Scrape UC Berkeley directory
     ucb_results = scrape_directory(ucb_config)
     ucb_results.to_csv(ucb_config["output_file"], index=False)
@@ -40,3 +35,8 @@ if __name__ == "__main__":
     ucr_results = scrape_directory(ucr_config)
     ucr_results.to_csv(ucr_config["output_file"], index=False)
     print(f"Scraping complete for UC Berkeley! Data saved to {ucr_config['output_file']}")
+
+    # Scrape UCSD directory
+    ucsd_results = scrape_directory(ucsd_config)
+    ucsd_results.to_csv(ucsd_config["output_file"], index=False)
+    print(f"Scraping complete for UCSD! Data saved to {ucsd_config['output_file']}.")

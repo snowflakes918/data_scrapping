@@ -27,7 +27,7 @@ CAMPUS_OPTIONS = {
 
 
 def data_pre_process(filepath):
-    data = pd.read_csv(filepath_or_buffer='../data/test_location - main.csv')
+    data = pd.read_csv(filepath_or_buffer='../Campus_Dir_Scrapper/beautifulSoup_impl/data/test_location - main.csv')
     data = data.drop_duplicates(subset=['Room', 'Building'])
     data.reset_index(drop=True, inplace=True)
 
@@ -35,7 +35,7 @@ def data_pre_process(filepath):
 
 
 def extract_first_digit(room_number):
-    if ' ' in room_number or ',' in room_number:
+    if ' ' in room_number or ',' in room_number and 'floor' not in room_number:
         return '0'
     match = re.search(r'\d', room_number)
     return match.group(0) if match else "0"
@@ -126,5 +126,5 @@ def open_page_for_inspection():
 
 if __name__ == "__main__":
     # open_page_for_inspection()
-    df = data_pre_process()
+    df = data_pre_process('../Campus_Dir_Scrapper/beautifulSoup_impl/data/test_location - main.csv')
     print_page_html(df)

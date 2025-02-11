@@ -55,7 +55,7 @@ def get_contact_info_from_directory(name):
 
 def main():
     # Load data from CSV
-    data = pd.read_csv('../data/ucsf_staff.csv')
+    data = pd.read_csv('data/data_to_scrape - San Francisco.csv')
 
     # List to store results
     results = []
@@ -82,7 +82,7 @@ def main():
         display_result(result_data)
         time.sleep(1)
 
-    export_to_csv(results, '../result/ucsf_staff_with_contact_info.csv')
+    export_to_csv(results, 'result/ucsf_staff_with_contact_info.csv')
 
 def display_result(result):
     if not result['In_Directory']:

@@ -80,7 +80,7 @@ def find_contact_info(name):
             time.sleep(60)  # Wait for 60 seconds before retrying
 
 
-data = pd.read_csv('../data/ucla_staff.csv')
+data = pd.read_csv('data/data_to_scrap - Los Angeles.csv')
 
 # List to store results
 results = []
@@ -117,6 +117,6 @@ for index, row in data.iterrows():
 
 # Convert results to a DataFrame and save to a new CSV file
 results_df = pd.DataFrame(results)
-results_df.to_csv('../result/ucla_staff_with_contact_info.csv', index=False)
+results_df.to_csv('result/ucla_staff_with_contact_info.csv', index=False)
 
 print("Contact information has been processed and saved to 'ucla_staff_with_contact_info.csv'.")

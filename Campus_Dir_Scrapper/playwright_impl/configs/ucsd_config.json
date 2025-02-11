@@ -1,8 +1,8 @@
 {
-    "input_file": "data/input/data_to_scrap - San Diego.csv",
+    "input_file": "data/input/data_to_scrape - San Diego.csv",
     "output_file": "data/output/ucsd_directory.csv",
-    "search_url": "https://itsweb.ucsd.edu/directory/search?last={last_name}&first={first_name}&email=&title=&phone=&fax=&dept2=&mail=&searchType=0",
-    "no_results_selector": "p:has-text('No results were found for your search.')",
+    "search_url": "https://itsweb.ucsd.edu/directory/search?last={last_name}&first={first_name}&email=&title=&phone=&fax=&dept2=&mail=&searchType=1",
+    "no_results_selector": "p:has-text('Your search didn't return any results.')",
     "multiple_results_selector": {
         "type": "text",
         "selector": ".row.spacer h3:has-text('Search Results')"
